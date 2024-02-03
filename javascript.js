@@ -60,99 +60,99 @@ const getNumber = function () {};
 
 num7.addEventListener("click", () => {
   if (operator === undefined) {
-    input1 = (input1 === undefined ? "" : input1) + "7";
+    input1 = Number((input1 === undefined ? "" : input1) + 7);
     display.textContent += "7";
   } else {
-    input2 = (input2 === undefined ? "" : input2) + "7";
+    input2 = Number((input2 === undefined ? "" : input2) + 7);
     display.textContent += "7";
   }
 });
 
 num8.addEventListener("click", () => {
   if (operator === undefined) {
-    input1 = (input1 === undefined ? "" : input1) + "8";
+    input1 = Number((input1 === undefined ? "" : input1) + "8");
     display.textContent += "8";
   } else {
-    input2 = (input2 === undefined ? "" : input2) + "8";
+    input2 = Number((input2 === undefined ? "" : input2) + "8");
     display.textContent += "8";
   }
 });
 
 num9.addEventListener("click", () => {
   if (operator === undefined) {
-    input1 = (input1 === undefined ? "" : input1) + "9";
+    input1 = Number((input1 === undefined ? "" : input1) + "9");
     display.textContent += "9";
   } else {
-    input2 = (input2 === undefined ? "" : input2) + "9";
+    input2 = Number((input2 === undefined ? "" : input2) + "9");
     display.textContent += "9";
   }
 });
 
 num4.addEventListener("click", () => {
   if (operator === undefined) {
-    input1 = (input1 === undefined ? "" : input1) + "4";
+    input1 = Number((input1 === undefined ? "" : input1) + "4");
     display.textContent += "4";
   } else {
-    input2 = (input2 === undefined ? "" : input2) + "4";
+    input2 = Number((input2 === undefined ? "" : input2) + "4");
     display.textContent += "4";
   }
 });
 
 num5.addEventListener("click", () => {
   if (operator === undefined) {
-    input1 = (input1 === undefined ? "" : input1) + "5";
+    input1 = Number((input1 === undefined ? "" : input1) + "5");
     display.textContent += "5";
   } else {
-    input2 = (input2 === undefined ? "" : input2) + "5";
+    input2 = Number((input2 === undefined ? "" : input2) + "5");
     display.textContent += "5";
   }
 });
 
 num6.addEventListener("click", () => {
   if (operator === undefined) {
-    input1 = (input1 === undefined ? "" : input1) + "6";
+    input1 = Number((input1 === undefined ? "" : input1) + "6");
     display.textContent += "6";
   } else {
-    input2 = (input2 === undefined ? "" : input2) + "6";
+    input2 = Number((input2 === undefined ? "" : input2) + "6");
     display.textContent += "6";
   }
 });
 
 num1.addEventListener("click", () => {
   if (operator === undefined) {
-    input1 = (input1 === undefined ? "" : input1) + "1";
+    input1 = Number((input1 === undefined ? "" : input1) + "1");
     display.textContent += "1";
   } else {
-    input2 = (input2 === undefined ? "" : input2) + "1";
+    input2 = Number((input2 === undefined ? "" : input2) + "1");
     display.textContent += "1";
   }
 });
 
 num2.addEventListener("click", () => {
   if (operator === undefined) {
-    input1 = (input1 === undefined ? "" : input1) + "2";
+    input1 = Number((input1 === undefined ? "" : input1) + "2");
     display.textContent += "2";
   } else {
-    input2 = (input2 === undefined ? "" : input2) + "2";
+    input2 = Number((input2 === undefined ? "" : input2) + "2");
     display.textContent += "2";
   }
 });
 
 num3.addEventListener("click", () => {
   if (operator === undefined) {
-    input1 = (input1 === undefined ? "" : input1) + "3";
+    input1 = Number((input1 === undefined ? "" : input1) + "3");
     display.textContent += "3";
   } else {
-    input2 = (input2 === undefined ? "" : input2) + "3";
+    input2 = Number((input2 === undefined ? "" : input2) + "3");
     display.textContent += "3";
   }
 });
 num0.addEventListener("click", () => {
   if (operator === undefined) {
-    input1 = (input1 === undefined ? "" : input1) + "0";
+    input1 = Number((input1 === undefined ? "" : input1) + "0");
     display.textContent += "0";
   } else {
-    input2 = (input2 === undefined ? "" : input2) + "0";
+    input2 = Number((input2 === undefined ? "" : input2) + "0");
     display.textContent += "0";
   }
 });
@@ -181,21 +181,33 @@ btnSubstract.addEventListener("click", () => {
 
 operate = function () {
   if (operator === divide) {
-    result = divide(input1, input2);
+    resultDivision = divide(input1, input2);
     display.textContent += ` = ${resultDivision}`;
-    //return resultDivision;
+    input1 = resultDivision;
+    input2 = undefined;
+
+    return resultDivision;
   } else if (operator === add) {
-    result = add(input1, input2);
+    resultAdd = Number(add(input1, input2));
     display.textContent += ` = ${resultAdd}`;
-    //return resultAdd;
+    input1 = resultAdd;
+    input2 = undefined;
+
+    return resultAdd;
   } else if (operator === substract) {
-    result = substract(input1, input2);
+    resultSubstract = substract(input1, input2);
     display.textContent += ` = ${resultSubstract}`;
-    //return resultSubstract;
+    input1 = resultSubstract;
+    input2 = undefined;
+
+    return resultSubstract;
   } else if (operator === multiply) {
-    result = multiply(input1, input2);
+    resultMultiply = multiply(input1, input2);
     display.textContent += ` = ${resultMultiply}`;
-    //return resultMultiply;
+    input1 = resultMultiply;
+    input2 = undefined;
+
+    return resultMultiply;
   }
 };
 
